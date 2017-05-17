@@ -80,6 +80,7 @@ class TestMethod {
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
                 .url(baseUrl + url)
+                .addHeader("Cookie", cookie)
                 .put(body)
                 .build();
         try (Response response = client.newCall(request).execute()) {
