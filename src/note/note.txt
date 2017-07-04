@@ -1,0 +1,21 @@
+﻿1.参数的类型不同，个数不同，在不改动代码结构的前提下，通过将某个参数的类型转换成需要的类型即可
+
+2.hashmap是无序的
+
+3.构造方法通过builder模式来创建，比写多个构造方法要更高效
+
+4.
+String：字符串常量
+
+StringBuffer：字符串变量
+
+StringBuilder：字符串变量
+StringBuffer对象的内容可以修改；而String对象一旦产生后就不可以被修改，重新赋值其实是两个对象。
+StringBuffer是线程安全的，在多线程程序中也可以很方便的进行使用，但是程序的执行效率相对来说就要稍微慢一些。StringBuilder是线程不安全的
+执行速度方面的比较：StringBuilder >  StringBuffer  >  String
+
+5.File[]数组里，要存放file应该以new File(path)
+
+6.程序需要数据的时候要使用输入流读取数据，而当程序需要将一些数据保存起来的时候，就要使用输出流完成
+
+在字节流中输出数据主要是使用OutputStream完成，输入使的是InputStream，在字符流中输出主要是使用Writer类完成，输入流主要使用Reader类完成

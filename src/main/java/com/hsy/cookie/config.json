@@ -1,0 +1,13 @@
+{
+  "cookie": [
+    {
+      "url": "http://www-alpha.qijigps.com/api",
+      "api": "/login"
+    },
+    {
+      "username": "13631260632",
+      "password": "96e79218965eb72c92a549dd5a330112",
+      "from": 0
+    }
+  ]
+}
