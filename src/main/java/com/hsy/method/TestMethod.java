@@ -35,15 +35,13 @@ public class TestMethod {
     public static class Builder{
         private TestMethod target;
 
-        public Builder(String method, String url){
+        public Builder(String method, String url, String data){
             target = new TestMethod();
             target.method = method;
             target.url = url;
-        }
-        public Builder data(String data){
             target.data = data;
-            return this;
         }
+
         public Builder param(HashMap<String, Object> param){
             target.param = param;
             return this;
@@ -72,34 +70,7 @@ public class TestMethod {
                 }
                 return given().contentType(ContentType.JSON).body(data).cookies(cookie).post(url);
             case "get":
-                if (data != null) {
-                    HashMap<String, Object> param = new HashMap<>();
-                    // 将json字符串转换成jsonObject
-                    JSONObject jsonObject = JSONObject.fromObject(data);
-                    Iterator ite = jsonObject.keys();
-                    // 遍历jsonObject数据,添加到Map对象
-                    while (ite.hasNext()) {
-                        String key = ite.next().toString();
-                        Object value = jsonObject.get(key);
-                        param.put(key, value);
-                    }
-                    Iterator<String> it = param.keySet().iterator();
-                    StringBuilder sb = null;
-                    while (it.hasNext()) {
-                        String key = it.next();
-                        Object value = param.get(key);
-                        if (sb == null) {
-                            sb = new StringBuilder();
-                            sb.append("?");
-                        } else {
-                            sb.append("&");
-                        }
-                        sb.append(key);
-                        sb.append("=");
-                        sb.append(value);
-                    }
-                    url += sb;
-                }
+                parseUrl(data);
                 if (cookie == null) {
                     return given().get(url);
                 }
@@ -110,6 +81,37 @@ public class TestMethod {
                 return given().param(String.valueOf(param)).cookies(cookie).delete(url);
             default:
                 return given().body(data).multiPart("upload_file", file).cookies(cookie).post(url);
+        }
+    }
+
+    private void parseUrl(String data) {
+        if (data != null) {
+            HashMap<String, Object> param = new HashMap<>();
+            // 将json字符串转换成jsonObject
+            JSONObject jsonObject = JSONObject.fromObject(data);
+            Iterator ite = jsonObject.keys();
+            // 遍历jsonObject数据,添加到Map对象
+            while (ite.hasNext()) {
+                String key = ite.next().toString();
+                Object value = jsonObject.get(key);
+                param.put(key, value);
+            }
+            Iterator<String> it = param.keySet().iterator();
+            StringBuilder sb = null;
+            while (it.hasNext()) {
+                String key = it.next();
+                Object value = param.get(key);
+                if (sb == null) {
+                    sb = new StringBuilder();
+                    sb.append("?");
+                } else {
+                    sb.append("&");
+                }
+                sb.append(key);
+                sb.append("=");
+                sb.append(value);
+            }
+            url += sb;
         }
     }
 }

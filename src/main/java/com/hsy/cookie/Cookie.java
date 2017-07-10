@@ -19,7 +19,7 @@ public class Cookie {
         InputStreamReader inputStreamReader;
         String tempString;
         try {
-            fileInputStream = new FileInputStream(path);
+            fileInputStream = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\hsy\\cookie\\" + path);
             inputStreamReader = new InputStreamReader(fileInputStream, "utf-8");
             reader = new BufferedReader(inputStreamReader);
             while ((tempString = reader.readLine()) != null) {
@@ -40,7 +40,7 @@ public class Cookie {
         return laststr.toString();
     }
     public static Cookies getCookie(){
-        String jsonContext = ReadFile(System.getProperty("user.dir")+"\\src\\main\\java\\com\\hsy\\cookie\\config.json");
+        String jsonContext = ReadFile("config.json");
         JSONObject jsonObject = JSONObject.fromObject(jsonContext);
         JSONArray jsonArray = JSONArray.fromObject(jsonObject.getString("cookie"));
         JSONObject jsonObject1 = JSONObject.fromObject(jsonArray.get(0));

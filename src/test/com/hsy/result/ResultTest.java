@@ -1,6 +1,10 @@
 package com.hsy.result;
 
+import com.hsy.readexcel.ReadExcelUtil;
+import net.sf.json.JSONObject;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -10,8 +14,11 @@ import static org.junit.Assert.*;
 public class ResultTest {
     @Test
     public void testResult() throws Exception {
-        System.out.println(Result.testResult());
-        assertEquals(Result.testResult().getInt("status"), 0);
-        assertEquals(Result.testResult().getString("message"), "操作成功。");
+        ArrayList<JSONObject> jsonObjects = new Result("test_case.xlsx", 5).testResult();
+        System.out.println(jsonObjects);
+//        Result result = new Result(0);
+//        for (int i = 0; i < jsonObjects.size(); i++) {
+//            assertEquals(result.getMessage().get(i), jsonObjects.get(i).getString("message"));
+//        }
     }
 }

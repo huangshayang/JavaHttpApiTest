@@ -2,74 +2,90 @@ package com.hsy.result;
 
 import com.hsy.cookie.Cookie;
 import com.hsy.method.TestMethod;
-import com.hsy.readexcel.ReadExcel;
+import com.hsy.readexcel.ReadExcelUtil;
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import net.sf.json.JSONObject;
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by HSY on 2017/6/30.
  */
-class Result {
-//    private static ReadExcel readExcel = new ReadExcel(System.getProperty("user.dir")+"\\src\\main\\java\\com\\hsy\\case\\Case.xlsx");
-//    private static int[] token = readExcel.getToken();
-    private static int[] token = {1};
-//    private static String[] method = readExcel.getMethods();
-    private static String[] method = {"get"};
-//    private static String[] url = readExcel.getUrls();
-    private static String[] url = {"/logout"};
-//    private static String[] data = readExcel.getDatas();
-//    private static String[] data = {"{\"username\":\"13631260632\", \"password\":\"96e79218965eb72c92a549dd5a330112\"}"};
-    private static String[] data = {null};
-//    private static HashMap<String, Object>[] param = readExcel.getParams();
-//    private static File[] file = readExcel.getFiles();
-    private static String[] file = {"\\src\\main\\java\\com\\hsy\\data\\updatecars.xlsx"};
-//    private static int row = readExcel.getRows();
-    private static int row = 1;
-    private static JSONObject jsonParam = new JSONObject();
+public class Result {
+    private static ReadExcelUtil readExcelUtil;
+    private ArrayList<Integer> token;
+    private ArrayList<String> method;
+    private ArrayList<String> url;
+    private ArrayList<String> data;
+    private ArrayList<String> file;
+    private int rows;
+    private JSONObject jsonParam = new JSONObject();
+    private ArrayList<JSONObject> jsonObjects = new ArrayList<>();
+    private final String DATAPATH = System.getProperty("user.dir") + "\\src\\main\\java\\com\\hsy\\data\\";
 
-    static JSONObject testResult(){
-//        String jsonResult = null;
-        for (int i = 0; i < row; i++) {
+    public ArrayList<Integer> getCode() throws IOException {
+        return readExcelUtil.getCodes();
+    }
+
+    public ArrayList<String> getMessage() throws IOException {
+        return readExcelUtil.getMessages();
+    }
+
+    public ArrayList<String> getName() throws IOException {
+        return readExcelUtil.getNames();
+    }
+
+    public Result(String casePath, int sheetIndex) throws IOException {
+        readExcelUtil = new ReadExcelUtil(casePath, sheetIndex);
+        token = readExcelUtil.getTokens();
+        method = readExcelUtil.getMethods();
+        url = readExcelUtil.getUrls();
+        data = readExcelUtil.getDatas();
+        file = readExcelUtil.getFiles();
+        rows = readExcelUtil.getRows();
+    }
+
+    private void addResult(Response response) {
+        if (response.statusCode() == 200) {
+            jsonObjects.add(JSONObject.fromObject(response.asString()));
+        }else {
+            jsonParam.put("status", response.statusCode());
+            jsonParam.put("message", "HTTP状态码错误，接口请求失败");
+            jsonObjects.add(jsonParam);
+        }
+    }
+
+     public ArrayList<JSONObject> testResult() throws IOException {
+        for (int i = 0; i < rows; i++) {
             try {
+                TestMethod.Builder testMethod = new TestMethod.Builder(method.get(i), url.get(i), data.get(i));
+                int flag = token.get(i);
                 Response response;
-                if (token[i] == 0) {
-                    response = new TestMethod.Builder(method[i], url[i]).data(data[i]).build().testApi();
-                    if (response.statusCode() == 200) {
-                        jsonParam = JSONObject.fromObject(response.asString());
-//                        jsonResult = testMethod.asString();
-                    }else {
-                        jsonParam.put("status", response.statusCode());
-                        jsonParam.put("message", "HTTP状态码错误，接口请求失败");
-//                        jsonResult="{\"status\": testMethod.statusCode(), \"message\": \"HTTP状态码错误，接口请求失败\"}";
-                    }
-                }else if (token[i] == 1) {
-                    response = new TestMethod.Builder(method[i], url[i]).data(data[i]).cookie(Cookie.getCookie()).build().testApi();
-                    if (response.statusCode() == 200) {
-                        jsonParam = JSONObject.fromObject(response.asString());
-//                        jsonResult = testMethod.asString();
-                    }else {
-                        jsonParam.put("status", response.statusCode());
-                        jsonParam.put("message", "HTTP状态码错误，接口请求失败");
-//                        jsonResult = "{\"status\": testMethod.statusCode(), \"message\": \"HTTP状态码错误，接口请求失败\"}";
-                    }
-                }else {
-                    response = new TestMethod.Builder(method[i], url[i]).data(data[i]).file(new File(System.getProperty("user.dir")+file[i])).cookie(Cookie.getCookie()).build().testApi();
-                    if (response.statusCode() == 200) {
-                        jsonParam = JSONObject.fromObject(response.asString());
-                    }else {
-                        jsonParam.put("status", response.statusCode());
-                        jsonParam.put("message", "HTTP状态码错误，接口请求失败");
-                    }
+                switch (flag) {
+                    case 0:
+                        response = testMethod.build().testApi();
+                        addResult(response);
+//                        ValidatableResponse validatableResponse = response.then().log().ifError();
+//                        long time = response.timeIn(TimeUnit.MILLISECONDS);
+                        break;
+                    case 1:
+                        response = testMethod.cookie(Cookie.getCookie()).build().testApi();
+                        addResult(response);
+                        break;
+                    default:
+                        response = testMethod.file(new File(DATAPATH+file.get(i))).cookie(Cookie.getCookie()).build().testApi();
+                        addResult(response);
                 }
             }catch (Exception e){
                 jsonParam.put("status", -1);
                 jsonParam.put("message", "未知错误(接口请求超时或传递数据错误等");
+                jsonObjects.add(jsonParam);
                 e.printStackTrace();
-//                jsonResult = "{\"status\": -1, \"message\": \"未知错误(接口请求超时或传递数据错误等\"}";
             }
         }
-//        return jsonResult;
-        return jsonParam;
+        return jsonObjects;
     }
 }

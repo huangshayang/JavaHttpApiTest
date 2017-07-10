@@ -19,3 +19,38 @@ StringBuffer是线程安全的，在多线程程序中也可以很方便的进�
 6.程序需要数据的时候要使用输入流读取数据，而当程序需要将一些数据保存起来的时候，就要使用输出流完成
 
 在字节流中输出数据主要是使用OutputStream完成，输入使的是InputStream，在字符流中输出主要是使用Writer类完成，输入流主要使用Reader类完成
+
+7.字符流是由Java虚拟机将字节转化为2个字节的Unicode字符为单位的字符而成的，所以它对多国语言支持性比较好！
+如果是音频文件、图片、歌曲，就用字节流好点，如果是关系到中文（文本）的，用字符流好点
+在所有的硬盘上保存文件或进行传输的时候都是以字节的方法进行的，包括图片也是按字节完成，而字符是只有在内存中才会形成的，所以使用字节的操作是最多的。
+
+8.excel的操作用
+<dependency>
+ <groupId>org.apache.poi</groupId>
+ <artifactId>poi</artifactId>
+ <version>3.17-beta1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+ <groupId>org.apache.poi</groupId>
+ <artifactId>poi-ooxml</artifactId>
+ <version>3.17-beta1</version>
+</dependency>
+这两个lib
+基本的操作：
+File file = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\hsy\\case\\" + casePath);
+FileInputStream fileInputStream = new FileInputStream(file);
+XSSFWorkbook xssfWorkbook = new XSSFWorkbook(fileInputStream);
+xssfWorkbook.getSheetAt(i)这个返回当前的sheet
+xssfWorkbook.getSheetAt(i).getLastRowNum()返回当前sheet的总行数
+xssfWorkbook.getSheetAt(i).getLastRowNum(j).getCell(k)返回第j行第k个单元格的值
+在操作单元格的时候，会因为单元格为空出现NullPointException，加入判断cell == null就好
+
+9.static关键字的作用：修饰变量，常量，方法，代码块，静态内部类，静态包导入。
+其中，静态代码块：JVM加载类时会执行这些静态的代码块，如果static代码块有多个，JVM将按照它们在类中出现的先后顺序依次执行它们，每个代码块只会被执行一次
+静态代码块优先于构造函数执行
+
+10.ArrayList：
+底层是数组实现；
+3种构造方法
+在添加时，都要去检查添加后元素的个数是否会超出当前数组的长度，如果超出，数组将会进行扩容
