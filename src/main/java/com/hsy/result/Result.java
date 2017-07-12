@@ -14,8 +14,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by HSY on 2017/6/30.
  */
-public class Result {
-    private static ReadExcelUtil readExcelUtil;
+public class Result extends ReadExcelUtil {
     private ArrayList<Integer> token;
     private ArrayList<String> method;
     private ArrayList<String> url;
@@ -26,26 +25,14 @@ public class Result {
     private ArrayList<JSONObject> jsonObjects = new ArrayList<>();
     private final String DATAPATH = System.getProperty("user.dir") + "\\src\\main\\java\\com\\hsy\\data\\";
 
-    public ArrayList<Integer> getCode() throws IOException {
-        return readExcelUtil.getCodes();
-    }
-
-    public ArrayList<String> getMessage() throws IOException {
-        return readExcelUtil.getMessages();
-    }
-
-    public ArrayList<String> getName() throws IOException {
-        return readExcelUtil.getNames();
-    }
-
     public Result(String casePath, int sheetIndex) throws IOException {
-        readExcelUtil = new ReadExcelUtil(casePath, sheetIndex);
-        token = readExcelUtil.getTokens();
-        method = readExcelUtil.getMethods();
-        url = readExcelUtil.getUrls();
-        data = readExcelUtil.getDatas();
-        file = readExcelUtil.getFiles();
-        rows = readExcelUtil.getRows();
+        super(casePath, sheetIndex);
+        token = super.getTokens();
+        method = super.getMethods();
+        url = super.getUrls();
+        data = super.getDatas();
+        file = super.getFiles();
+        rows = super.getRows();
     }
 
     private void addResult(Response response) {

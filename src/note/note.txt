@@ -54,3 +54,12 @@ xssfWorkbook.getSheetAt(i).getLastRowNum(j).getCell(k)返回第j行第k个单元
 底层是数组实现；
 3种构造方法
 在添加时，都要去检查添加后元素的个数是否会超出当前数组的长度，如果超出，数组将会进行扩容
+
+11.如果有多个类都需要某个类里的方法时，就使用继承，哪个类需要什么方法，这个类就调用父类什么方法，不必再自己写
+
+12.给二维数组赋值时，要指定一维和二维的长度，然后用[i] = xxx.xx(i)   [j] = xx.xxx(j)来赋值
+
+13.junit参数化测试方法：
+在测试类上指定@RunWith(Parameterized.class)
+然后设置需要用到的参数，并私有化，创建构造方法并赋值。
+再创建静态的参数方法，指定@Parameterized.Parameters，以集合的形式返回(Collection)，return Array.asList(二维数组)

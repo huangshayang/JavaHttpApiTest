@@ -1,35 +1,69 @@
 package com.hsy.resultparam;
 
+import com.hsy.readexcel.ReadExcelUtil;
 import com.hsy.result.Result;
 import net.sf.json.JSONObject;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * Created by HSY on 2017/7/7.
  */
-public class ResultParam {
+public class ResultParam extends ReadExcelUtil {
     private ArrayList<JSONObject> result;
-    private ArrayList<Integer> code;
-    private ArrayList<String> message ;
-    private ArrayList<String> name;
-    private ArrayList<Object> pa = new ArrayList<>();
+    private ArrayList<Integer> expCode;
+    private ArrayList<String> expMessage ;
+    private int rows;
+    private ArrayList<Integer> actCode = new ArrayList<>();
+    private ArrayList<String> actMessage = new ArrayList<>();
 
-    public ResultParam(String casePath, int sheetIndex) throws IOException {
+    public ResultParam(String casePath, int sheetIndex) throws IOException, ClassNotFoundException, NoSuchFieldException {
+        super(casePath, sheetIndex);
         result = new Result(casePath, sheetIndex).testResult();
-        code = new Result(casePath, sheetIndex).getCode();
-        message = new Result(casePath, sheetIndex).getMessage();
-        name = new Result(casePath, sheetIndex).getName();
+        expCode = super.getCodes();
+        expMessage = super.getMessages();
+        rows = super.getRows();
     }
 
-    public ArrayList<Object> value() {
-        for (int i = 0; i < result.size(); i++) {
-            pa.add(result.get(i).getInt("status"));
-            pa.add(result.get(i).getString("message"));
-            pa.add(code.get(i));
-            pa.add(message.get(i));
-            pa.add(name.get(i));
+    public ArrayList<Integer> actCode() {
+        for (JSONObject aResult : result) {
+            actCode.add(aResult.getInt("status"));
         }
-        return pa;
+        return actCode;
     }
+
+    public ArrayList<String> actMessage() {
+        for (JSONObject aResult : result) {
+            actMessage.add(aResult.getString("message"));
+        }
+        return actMessage;
+    }
+
+    public ArrayList<Integer> expCode() {
+        return expCode;
+    }
+
+    public ArrayList<String> expMessage() {
+        return expMessage;
+    }
+
+    public int size() {
+        return rows;
+    }
+
+//    public static Collection prepareData() throws IOException {
+//        ResultParam resultParam = new ResultParam("test_case.xlsx", 0);
+//        int size = resultParam.expCode.size();
+//        Object[][] objects = new Object[size][4];
+//        for (int i = 0; i < objects.length; i++) {
+//            objects[i][0] = resultParam.expCode.get(i);
+//            objects[i][1] = resultParam.actCode.get(i);
+//            objects[i][2] = resultParam.expMessage.get(i);
+//            objects[i][3] = resultParam.actMessage.get(i);
+//        }
+//        return Arrays.asList(objects);
+//    }
 }
