@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Converted JUnit suite" >
     <listeners>
-        <listener class-name="com.hsy.ExtentTestNGITestListener"></listener>
+        <listener class-name="resources.ExtentTestNGITestListener"></listener>
     </listeners>
     <test name="JUnitTests" junit="true" verbose="10">
         <classes>
-            <class name="com.hsy.LoginCaseTest" />
-            <class name="com.hsy.CheckUserExistCaseTest" />
+            <class name="resources.LoginCaseTest" />
+            <class name="resources.CheckUserExistCaseTest" />
         </classes>
     </test>
 </suite>

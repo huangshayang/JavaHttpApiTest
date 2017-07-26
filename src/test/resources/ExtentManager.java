@@ -1,4 +1,4 @@
-package com.hsy;
+package resources;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
