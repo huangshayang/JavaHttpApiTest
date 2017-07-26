@@ -12,7 +12,6 @@ import java.util.ArrayList;
  * Created by HSY on 2017/7/5.
  */
 public class ReadExcelUtil implements ReadExcelUtilInterface {
-    private String casePath;
     private int sheetIndex;
     private ArrayList<String> xssfCellNames = new ArrayList<>();
     private ArrayList<String> xssfCellUrls = new ArrayList<>();
@@ -24,20 +23,15 @@ public class ReadExcelUtil implements ReadExcelUtilInterface {
     private ArrayList<Integer> xssfCellTokens = new ArrayList<>();
     private XSSFWorkbook xssfWorkbook;
 
-    public ReadExcelUtil(String casePath, int sheetIndex) {
-        this.casePath = casePath;
+    public ReadExcelUtil(String casePath, int sheetIndex) throws IOException {
         this.sheetIndex = sheetIndex;
-    }
-
-    private XSSFSheet sheets() throws IOException {
         File file = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\hsy\\case\\" + casePath);
         FileInputStream fileInputStream = new FileInputStream(file);
         xssfWorkbook = new XSSFWorkbook(fileInputStream);
-        return xssfWorkbook.getSheetAt(sheetIndex);
     }
 
-    public int getAllSheets() throws IOException {
-        return xssfWorkbook.getNumberOfSheets();
+    private XSSFSheet sheets() throws IOException {
+        return xssfWorkbook.getSheetAt(sheetIndex);
     }
 
     public int getRows() throws IOException {

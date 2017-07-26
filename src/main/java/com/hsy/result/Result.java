@@ -4,12 +4,10 @@ import com.hsy.cookie.Cookie;
 import com.hsy.method.TestMethod;
 import com.hsy.readexcel.ReadExcelUtil;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import net.sf.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by HSY on 2017/6/30.
@@ -55,8 +53,6 @@ public class Result extends ReadExcelUtil {
                     case 0:
                         response = testMethod.build().testApi();
                         addResult(response);
-//                        ValidatableResponse validatableResponse = response.then().log().ifError();
-//                        long time = response.timeIn(TimeUnit.MILLISECONDS);
                         break;
                     case 1:
                         response = testMethod.cookie(Cookie.getCookie()).build().testApi();

@@ -9,8 +9,6 @@ import java.util.ArrayList;
 public interface ReadExcelUtilInterface {
     int getRows() throws IOException;
 
-    int getAllSheets() throws IOException;
-
     ArrayList<String> getNames() throws IOException;
 
     ArrayList<String> getUrls() throws IOException;

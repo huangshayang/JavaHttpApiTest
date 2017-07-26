@@ -1,24 +1,25 @@
-package com.hsy.resultparam;
+package com.hsy;
 
+import com.hsy.resultparam.ResultParam;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
 
 /**
- * Created by HSY on 2017/7/7.
+ * Created by HSY on 2017/7/24.
  */
-
 @RunWith(Parameterized.class)
-public class ResultParamTest {
+public class CheckUserExistCaseTest {
     private int actCode;
     private String actMessage;
     private int expCode;
     private String expMessage;
 
-    public ResultParamTest(int expCode, int actCode, String expMessage, String actMessage) {
+    public CheckUserExistCaseTest(int expCode, int actCode, String expMessage, String actMessage) {
         this.expCode = expCode;
         this.actCode = actCode;
         this.expMessage = expMessage;
@@ -27,7 +28,7 @@ public class ResultParamTest {
 
     @Parameterized.Parameters
     public static Collection prepareData() throws IOException, ClassNotFoundException, NoSuchFieldException {
-        ResultParam resultParam = new ResultParam("test_case.xlsx", 0);
+        ResultParam resultParam = new ResultParam("test_case.xlsx", 1);
         int size = resultParam.size();
         Object[][] objects = new Object[size][4];
         for (int i = 0; i < objects.length; i++) {
@@ -40,7 +41,7 @@ public class ResultParamTest {
     }
 
     @Test
-    public void testResultParam() {
+    public void testCheckUserExist() {
         Assert.assertEquals(expCode, actCode);
         Assert.assertEquals(expMessage, actMessage);
     }

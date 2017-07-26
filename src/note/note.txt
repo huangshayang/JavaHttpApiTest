@@ -55,6 +55,15 @@ xssfWorkbook.getSheetAt(i).getLastRowNum(j).getCell(k)返回第j行第k个单元
 3种构造方法
 在添加时，都要去检查添加后元素的个数是否会超出当前数组的长度，如果超出，数组将会进行扩容
 
+ArrayList不是线程安全的，只能用在单线程环境下，同样的实现Vector的方法前加了关键字synchronized
+多线程环境下可以考虑用Collections.synchronizedList(List l)函数返回一个线程安全的ArrayList类，List list = Collections.synchronizedList(new ArrayList());
+
+Vector和Collections.synchronizedList区别：
+（1）Vector比Collections.synchronizedList快了一点，SynchronizedList<E>类使用了委托(delegation)，实质上存储还是使用了构造时传进来的list，只是将list作为底层存储，对它做了一层包装
+（2）SynchronizedList的同步，使用的是synchronized代码块对mutex对象加锁，这个mutex对象还能够通过构造函数传进来，也就是说我们可以指定锁定的对象
+而Vector则使用了synchronized方法，同步方法的作用范围是整个方法，所以没办法对同步进行细粒度的控制。而且同步方法加锁的是this对象，没办法控制锁定的对象
+
+
 11.如果有多个类都需要某个类里的方法时，就使用继承，哪个类需要什么方法，这个类就调用父类什么方法，不必再自己写
 
 12.给二维数组赋值时，要指定一维和二维的长度，然后用[i] = xxx.xx(i)   [j] = xx.xxx(j)来赋值
