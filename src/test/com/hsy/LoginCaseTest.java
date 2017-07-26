@@ -1,6 +1,7 @@
 package com.hsy;
 
 import com.hsy.resultparam.ResultParam;
+import io.qameta.allure.Description;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,6 +42,7 @@ public class LoginCaseTest {
     }
 
     @Test
+    @Description("登录用例测试")
     public void testLogin() {
         Assert.assertEquals(expCode, actCode);
         Assert.assertEquals(expMessage, actMessage);

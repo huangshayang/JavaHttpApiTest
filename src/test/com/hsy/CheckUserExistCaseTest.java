@@ -1,6 +1,7 @@
 package com.hsy;
 
 import com.hsy.resultparam.ResultParam;
+import io.qameta.allure.Description;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,6 +42,7 @@ public class CheckUserExistCaseTest {
     }
 
     @Test
+    @Description("检查用户是否存在测试")
     public void testCheckUserExist() {
         Assert.assertEquals(expCode, actCode);
         Assert.assertEquals(expMessage, actMessage);
