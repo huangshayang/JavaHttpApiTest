@@ -21,6 +21,7 @@
                 <suiteXmlFiles>
                   <suiteXmlFile>src/main/java/testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
+                <testFailureIgnore>true</testFailureIgnore>
               </configuration>
               <version>2.20</version>
             </plugin>

@@ -1,3 +1,5 @@
+package com.hsy;
+
 import com.hsy.resultparam.ResultParam;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,16 +10,16 @@ import java.util.Arrays;
 import java.util.Collection;
 
 /**
- * Created by HSY on 2017/7/14.
+ * Created by HSY on 2017/7/24.
  */
 @RunWith(Parameterized.class)
-public class LoginCaseTest {
+public class CheckUserExistCaseTest {
     private int actCode;
     private String actMessage;
     private int expCode;
     private String expMessage;
 
-    public LoginCaseTest(int expCode, int actCode, String expMessage, String actMessage) {
+    public CheckUserExistCaseTest(int expCode, int actCode, String expMessage, String actMessage) {
         this.expCode = expCode;
         this.actCode = actCode;
         this.expMessage = expMessage;
@@ -26,7 +28,7 @@ public class LoginCaseTest {
 
     @Parameterized.Parameters
     public static Collection prepareData() throws IOException, ClassNotFoundException, NoSuchFieldException {
-        ResultParam resultParam = new ResultParam("test_case.xlsx", 0);
+        ResultParam resultParam = new ResultParam("test_case.xlsx", 1);
         int size = resultParam.size();
         Object[][] objects = new Object[size][4];
         for (int i = 0; i < objects.length; i++) {
@@ -39,7 +41,7 @@ public class LoginCaseTest {
     }
 
     @Test
-    public void testLogin() {
+    public void testCheckUserExist() {
         Assert.assertEquals(expCode, actCode);
         Assert.assertEquals(expMessage, actMessage);
     }
