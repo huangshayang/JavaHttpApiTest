@@ -1,5 +1,3 @@
-package resources;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.ITestContext;
@@ -8,7 +6,7 @@ import org.testng.ITestResult;
 
 public class ExtentTestNGITestListener implements ITestListener {
 
-    private static ExtentReports extent = resources.ExtentManager.createInstance("extent.html");
+    private static ExtentReports extent = ExtentManager.createInstance("extent.html");
     private static ThreadLocal<ExtentTest> parentTest = new ThreadLocal<ExtentTest>();
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
