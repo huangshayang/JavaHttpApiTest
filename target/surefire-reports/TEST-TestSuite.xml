@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="4.518" tests="15" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="7.839" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\Java\jdk1.8.0_101\jre\bin"/>
@@ -64,23 +64,4 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testLogin[0] on testLogin[0](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0.016">
-    <failure message="expected:&lt;0&gt; but was:&lt;204&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<204>
-	at Java.LoginCaseTest.testLogin(LoginCaseTest.java:45)
-]]></failure>
-  </testcase>
-  <testcase name="testLogin[1] on testLogin[1](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testLogin[2] on testLogin[2](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testLogin[3] on testLogin[3](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testLogin[4] on testLogin[4](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testLogin[5] on testLogin[5](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testLogin[6] on testLogin[6](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testLogin[7] on testLogin[7](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testLogin[8] on testLogin[8](Java.LoginCaseTest)" classname="Java.LoginCaseTest" time="0"/>
-  <testcase name="testCheckUserExist[0] on testCheckUserExist[0](Java.CheckUserExistCaseTest)" classname="Java.CheckUserExistCaseTest" time="0"/>
-  <testcase name="testCheckUserExist[1] on testCheckUserExist[1](Java.CheckUserExistCaseTest)" classname="Java.CheckUserExistCaseTest" time="0"/>
-  <testcase name="testCheckUserExist[2] on testCheckUserExist[2](Java.CheckUserExistCaseTest)" classname="Java.CheckUserExistCaseTest" time="0"/>
-  <testcase name="testCheckUserExist[3] on testCheckUserExist[3](Java.CheckUserExistCaseTest)" classname="Java.CheckUserExistCaseTest" time="0"/>
-  <testcase name="testCheckUserExist[4] on testCheckUserExist[4](Java.CheckUserExistCaseTest)" classname="Java.CheckUserExistCaseTest" time="0"/>
-  <testcase name="testCheckUserExist[5] on testCheckUserExist[5](Java.CheckUserExistCaseTest)" classname="Java.CheckUserExistCaseTest" time="0"/>
 </testsuite>
