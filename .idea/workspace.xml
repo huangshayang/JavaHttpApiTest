@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae57165-c35f-4d46-bd02-5c70690a5501" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hsy/case/HiveApi_test_case.xlsx" afterPath="$PROJECT_DIR$/src/main/java/com/hsy/case/HiveApi_test_case.xlsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/2017-07-26T17-41-47_348-jvmRun1.dump" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HiveApiTest.iml" afterPath="$PROJECT_DIR$/HiveApiTest.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extent.html" afterPath="$PROJECT_DIR$/extent.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/testng.xml" afterPath="$PROJECT_DIR$/src/main/java/testng.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/CheckUserExistCaseTest.java" afterPath="$PROJECT_DIR$/src/test/com/hsy/CheckUserExistCaseTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/ExtentManager.java" afterPath="$PROJECT_DIR$/src/test/com/hsy/ExtentManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/ExtentTestNGITestListener.java" afterPath="$PROJECT_DIR$/src/test/com/hsy/ExtentTestNGITestListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/LoginCaseTest.java" afterPath="$PROJECT_DIR$/src/test/com/hsy/LoginCaseTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/hsy/CheckUserExistCaseTest.java" afterPath="$PROJECT_DIR$/src/test/Java/CheckUserExistCaseTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/hsy/ExtentManager.java" afterPath="$PROJECT_DIR$/src/test/Java/ExtentManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/hsy/ExtentTestNGITestListener.java" afterPath="$PROJECT_DIR$/src/test/Java/ExtentTestNGITestListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/hsy/LoginCaseTest.java" afterPath="$PROJECT_DIR$/src/test/Java/LoginCaseTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,10 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="LoginCaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/hsy/LoginCaseTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/Java/LoginCaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,10 +38,34 @@
         </entry>
       </file>
       <file leaf-file-name="ExtentManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/hsy/ExtentManager.java">
+        <entry file="file://$PROJECT_DIR$/src/test/Java/ExtentManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckUserExistCaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Java/CheckUserExistCaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExtentTestNGITestListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Java/ExtentTestNGITestListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,33 +76,9 @@
       <file leaf-file-name="testng.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExtentTestNGITestListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/hsy/ExtentTestNGITestListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckUserExistCaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/hsy/CheckUserExistCaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,18 +86,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cookie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hsy/cookie/Cookie.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+              <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -161,15 +152,16 @@
         <option value="$PROJECT_DIR$/src/test/resources/CheckUserExistCaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/LoginCaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/ExtentManager.java" />
-        <option value="$PROJECT_DIR$/src/test/LoginCaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/ExtentManager.java" />
         <option value="$PROJECT_DIR$/src/test/ExtentTestNGITestListener.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/com/hsy/cookie/CookieTest.java" />
         <option value="$PROJECT_DIR$/src/test/com/hsy/ExtentManager.java" />
         <option value="$PROJECT_DIR$/src/test/com/hsy/LoginCaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/com/hsy/ExtentTestNGITestListener.java" />
         <option value="$PROJECT_DIR$/src/test/com/hsy/CheckUserExistCaseTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/LoginCaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/Java/LoginCaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/testng.xml" />
       </list>
     </option>
@@ -191,6 +183,38 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HiveApiTest" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HiveApiTest" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HiveApiTest" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HiveApiTest" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="install" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="HiveApiTest" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Run Configurations" type="21c1f71a:MavenProjectsStructure$RunConfigurationsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -247,32 +271,6 @@
               <item name="HiveApiTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="HiveApiTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hsy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiveApiTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiveApiTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hsy" type="462c0819:PsiDirectoryNode" />
-              <item name="case" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiveApiTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiveApiTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hsy" type="462c0819:PsiDirectoryNode" />
-              <item name="cookie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiveApiTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiveApiTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,18 +278,12 @@
               <item name="HiveApiTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="hsy" type="462c0819:PsiDirectoryNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HiveApiTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="HiveApiTest" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HiveApiTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HiveApiTest" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="surefire-reports" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,7 +294,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -333,11 +325,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\HiveApiTest\src\test\com\hsy" />
-      <recent name="D:\IdeaProjects\HiveApiTest\src\main\java" />
-      <recent name="D:\IdeaProjects\HiveApiTest\src\test\resources" />
-      <recent name="D:\IdeaProjects\HiveApiTest\src\main\java\com\hsy" />
       <recent name="D:\IdeaProjects\HiveApiTest\src\test" />
+      <recent name="D:\IdeaProjects\HiveApiTest\src\note" />
+      <recent name="D:\IdeaProjects\HiveApiTest\src\main\java" />
+      <recent name="D:\IdeaProjects\HiveApiTest\src\test\com\hsy" />
+      <recent name="D:\IdeaProjects\HiveApiTest\src\main\java\com\hsy" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -353,32 +345,30 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml">
-    <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/com/hsy/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="CheckUserExistCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.hsy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="HiveApiTest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/java/com/hsy/testng.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.hsy" />
+      <option name="MAIN_CLASS_NAME" value="com.hsy.CheckUserExistCaseTest" />
       <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="ANNOTATION_TYPE" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" value="" />
       <envs />
-      <properties />
-      <listeners />
+      <patterns />
     </configuration>
     <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -407,50 +397,23 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="D:/IdeaProjects/HiveApiTest/src/test/resources/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="HiveApiTest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" value="" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="LoginCaseTest.testLogin" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="resources.*" />
+          <option name="PATTERN" value="com.hsy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="HiveApiTest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="resources" />
-      <option name="MAIN_CLASS_NAME" value="resources.LoginCaseTest" />
-      <option name="METHOD_NAME" value="testLogin" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
+      <option name="PACKAGE_NAME" value="com.hsy" />
+      <option name="MAIN_CLASS_NAME" value="com.hsy.LoginCaseTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -459,24 +422,28 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="ResultParamTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.hsy.resultparam.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.hsy.resultparam.ResultParamTest" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="HiveApiTest" />
-      <envs />
+    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -882,24 +849,25 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Android JUnit.LoginCaseTest.testLogin" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ResultParamTest" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.D:/IdeaProjects/HiveApiTest/src/main/java/com/hsy/testng.xml" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Maven.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LoginCaseTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CheckUserExistCaseTest" />
       <item index="3" class="java.lang.String" itemvalue="TestNG.D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.D:/IdeaProjects/HiveApiTest/src/test/resources/testng.xml" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="TestNG.D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.D:/IdeaProjects/HiveApiTest/src/test/resources/testng.xml" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.D:/IdeaProjects/HiveApiTest/src/main/java/com/hsy/testng.xml" />
-        <item index="3" class="java.lang.String" itemvalue="Android JUnit.LoginCaseTest.testLogin" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CheckUserExistCaseTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LoginCaseTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -939,44 +907,44 @@
       <workItem from="1501037712009" duration="7554000" />
       <workItem from="1501048232414" duration="8168000" />
       <workItem from="1501057853494" duration="3659000" />
-      <workItem from="1501061934310" duration="200000" />
+      <workItem from="1501061934310" duration="2124000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 16m 30s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
+    <history-entry file="CheckUserExistCaseTest - 2017.07.26 at 17h 45m 23s.xml">
+      <configuration name="CheckUserExistCaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 25m 19s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
+    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_com_hsy_testng_xml - 2017.07.26 at 17h 46m 33s.xml">
+      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/com/hsy/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 26m 08s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 28m 20s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 34m 37s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 34m 57s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 36m 24s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
+    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_com_hsy_testng_xml - 2017.07.26 at 17h 46m 54s.xml">
+      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/com/hsy/testng.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 41m 28s.xml">
       <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__IdeaProjects_HiveApiTest_src_test_resources_testng_xml - 2017.07.26 at 17h 31m 44s.xml">
-      <configuration name="D:/IdeaProjects/HiveApiTest/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 17h 52m 18s.xml">
+      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 18h 08m 16s.xml">
+      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="D__IdeaProjects_HiveApiTest_src_main_java_testng_xml - 2017.07.26 at 18h 10m 40s.xml">
+      <configuration name="D:/IdeaProjects/HiveApiTest/src/main/java/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="D__IdeaProjects_HiveApiTest_src_test_com_hsy_testng_xml - 2017.07.26 at 17h 49m 07s.xml">
+      <configuration name="D:/IdeaProjects/HiveApiTest/src/test/com/hsy/testng.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="D__IdeaProjects_HiveApiTest_src_test_resources_testng_xml - 2017.07.26 at 17h 34m 06s.xml">
       <configuration name="D:/IdeaProjects/HiveApiTest/src/test/resources/testng.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="LoginCaseTest - 2017.07.26 at 17h 45m 11s.xml">
+      <configuration name="LoginCaseTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196912000" />
+    <option name="totallyTimeSpent" value="198836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -989,7 +957,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -998,14 +965,15 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32169312" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2390625" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2390625" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1019,7 +987,6 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1264,10 +1231,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/surefire-reports/2017-07-26T17-30-38_027-jvmRun1.dump" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/com/hsy/cookie/CookieTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1280,48 +1247,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/hsy/cookie/CookieTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/Java/LoginCaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/ExtentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/ExtentTestNGITestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/hsy/ExtentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/hsy/LoginCaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/Java/CheckUserExistCaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/hsy/ExtentTestNGITestListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/hsy/CheckUserExistCaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1330,8 +1297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="153">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding />
         </state>
       </provider>

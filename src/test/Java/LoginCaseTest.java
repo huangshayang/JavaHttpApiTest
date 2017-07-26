@@ -1,4 +1,4 @@
-package com.hsy;
+package Java;
 
 import com.hsy.resultparam.ResultParam;
 import org.junit.Assert;
