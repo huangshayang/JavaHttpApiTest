@@ -72,3 +72,18 @@ Vector和Collections.synchronizedList区别：
 在测试类上指定@RunWith(Parameterized.class)
 然后设置需要用到的参数，并私有化，创建构造方法并赋值。
 再创建静态的参数方法，指定@Parameterized.Parameters，以集合的形式返回(Collection)，return Array.asList(二维数组)
+
+14.linux命令：
+重启:reboot
+配置环境变量: su root   gedit ~/.bashrc 或者 gedit /etc/profile
+解压: tar -zxvf XXXXX
+转移文件: mv XXX   XXXX
+创建文件夹: mkdir XXXX
+删除文件: rm -f XXXX  
+删除文件夹（递归）: rm -rf xxxxx
+配置java环境变量，maven环境变量:
+export JAVA_HOME=/usr/java/jdk1.8.0_144
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib
+export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+export PATH=/opt/apache-maven-3.5.0/bin:$PATH
