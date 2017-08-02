@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 /**
  * Created by HSY on 2017/7/7.
+ * 获取当前sheet的所有预期code，预期message，实际code，实际message，当前的行数
  */
 public class ResultParam extends ReadExcelUtil {
     private ArrayList<JSONObject> result;

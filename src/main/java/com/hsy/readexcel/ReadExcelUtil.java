@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 /**
  * Created by HSY on 2017/7/5.
+ * 获取当前sheet的行数，url，data，code，message，name，method
  */
 public class ReadExcelUtil implements ReadExcelUtilInterface {
     private int sheetIndex;
