@@ -3,6 +3,7 @@
 2.hashmap是无序的
 
 3.构造方法通过builder模式来创建，比写多个构造方法要更高效
+方法：一个要执行的类，里面包含私有属性，并创建私有的构造方法（赋值），其中构造方法里传入外部类的实例对象，再创建一个内部静态类,定义外部类的实例，并创建静态内部类的public构造方法，并在构造方法里实例化外部类的实例，在构造方法里定义需要每次调用必须传的对象，给外部类的实例对象属性赋值，再创建后续需要调用的方法，最后在内部类创建类型为外部类的public build方法，返回值为外部类对象，并传入外部类的实例
 
 4.
 String：字符串常量
@@ -63,7 +64,6 @@ Vector和Collections.synchronizedList区别：
 （2）SynchronizedList的同步，使用的是synchronized代码块对mutex对象加锁，这个mutex对象还能够通过构造函数传进来，也就是说我们可以指定锁定的对象
 而Vector则使用了synchronized方法，同步方法的作用范围是整个方法，所以没办法对同步进行细粒度的控制。而且同步方法加锁的是this对象，没办法控制锁定的对象
 
-
 11.如果有多个类都需要某个类里的方法时，就使用继承，哪个类需要什么方法，这个类就调用父类什么方法，不必再自己写
 
 12.给二维数组赋值时，要指定一维和二维的长度，然后用[i] = xxx.xx(i)   [j] = xx.xxx(j)来赋值
@@ -73,7 +73,21 @@ Vector和Collections.synchronizedList区别：
 然后设置需要用到的参数，并私有化，创建构造方法并赋值。
 再创建静态的参数方法，指定@Parameterized.Parameters，以集合的形式返回(Collection)，return Array.asList(二维数组)
 
-14.linux命令：
+14.Optional是Java8提供的为了解决null安全问题的一个API（http://wkee.net/post/12828.html）
+使用Optional，就可以把下面这样的代码进行改写。
+public static String getName(User u) {
+    if (u == null)
+        return "Unknown";
+    return u.name;
+}
+
+public static String getName(User u) {
+    return Optional.ofNullable(u)
+                    .map(user->user.name)
+                    .orElse("Unknown");
+}
+
+15.linux命令：
 重启:reboot
 配置环境变量: su root   gedit ~/.bashrc 或者 gedit /etc/profile
 解压: tar -zxvf XXXXX
