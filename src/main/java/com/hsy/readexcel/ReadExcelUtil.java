@@ -100,9 +100,10 @@ public class ReadExcelUtil implements ReadExcelUtilInterface {
     }
 
     private String parseCellStr(XSSFCell cell) {
-        if (cell == null) {
-            return null;
-        }
-        return cell.toString();
+//         if (cell == null) {
+//             return null;
+//         }
+//         return cell.toString();
+        return Optional.ofNullable(cell).map(XSSFCell::toString).orElse(null);
     }
 }
