@@ -92,7 +92,7 @@ public static String getName(User u) {
 配置环境变量: su root   gedit ~/.bashrc 或者 gedit /etc/profile
 解压: tar -zxvf XXXXX
 转移文件: mv XXX   XXXX
-创建文件夹: mkdir XXXX
+创建文件夹: mkdir XXXX(-p为递归创建)
 删除文件: rm -f XXXX  
 删除文件夹（递归）: rm -rf xxxxx
 配置java环境变量，maven环境变量:
@@ -101,3 +101,7 @@ export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib
 export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 export PATH=/opt/apache-maven-3.5.0/bin:$PATH
+pwd：当前位置
+cd ~：回到家目录
+cd -：回到上次的目录
+cd ..：进入上一级目录
