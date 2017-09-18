@@ -105,3 +105,16 @@ pwd：当前位置
 cd ~：回到家目录
 cd -：回到上次的目录
 cd ..：进入上一级目录
+
+16.elasticsearch安装教程：
+ 下载解压elasticsearch
+ 安装node npm
+ sudo ln -s /opt/node-v4.4.4-linux-x64/bin/node /usr/local/bin/node 
+ sudo ln -s /opt/node-v4.4.4-linux-x64/bin/npm /usr/local/bin/npm
+ 运行./bin/elasticsearch
+ 下载head插件
+ 修改，/config/elasticsearch.yml 
+ http.cors.enabled: true
+ http.cors.allow-origin: "*"
+
+
