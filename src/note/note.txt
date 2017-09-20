@@ -117,4 +117,7 @@ cd ..：进入上一级目录
  http.cors.enabled: true
  http.cors.allow-origin: "*"
 
+17.ubuntu安装docker
+1. sudo wget -qO- https://get.docker.com/ | sh
+2. sudo usermod -aG docker hsy
 
