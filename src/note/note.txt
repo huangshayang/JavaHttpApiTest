@@ -117,7 +117,7 @@ cd ..：进入上一级目录
  http.cors.enabled: true
  http.cors.allow-origin: "*"
 
-17.ubuntu安装docker
+17.ubuntu安装docker：
 1. sudo wget -qO- https://get.docker.com/ | sh
 2. sudo usermod -aG docker hsy
 
@@ -132,3 +132,12 @@ docker commit -m '' 保存镜像里的改动
 docker rmi  (image的id) 删除某个镜像
 docker rm (image的id) 删除ps里的镜像
 docker cp 在host和container之间拷贝文件
+
+touch Dockerfile 创建dockerfile
+docker file语法：
+FROM base image
+RUN 执行命令
+ADD 添加文件
+COPY 拷贝文件
+CMD 执行命令
+EXPOSE 暴露端口
