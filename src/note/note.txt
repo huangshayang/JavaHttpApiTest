@@ -135,7 +135,7 @@ docker cp 在host和container之间拷贝文件
 
 touch Dockerfile 创建dockerfile
 docker file语法：
-FROM base image
+FROM 基础镜像
 RUN 执行命令
 ADD 添加文件
 COPY 拷贝文件
