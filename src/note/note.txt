@@ -6,12 +6,12 @@
 方法：一个要执行的类，里面包含私有属性，并创建私有的构造方法（赋值），其中构造方法里传入外部类的实例对象，再创建一个内部静态类,定义外部类的实例，并创建静态内部类的public构造方法，并在构造方法里实例化外部类的实例，在构造方法里定义需要每次调用必须传的对象，给外部类的实例对象属性赋值，再创建后续需要调用的方法，最后在内部类创建类型为外部类的public build方法，返回值为外部类对象，并传入外部类的实例
 
 4.
-String：字符串常量
+String：字符串常量。String对象一旦产生后就不可以被修改，重新赋值其实是两个对象,因为操作的是引用，并不是对象本身。
 
 StringBuffer：字符串变量
 
 StringBuilder：字符串变量
-StringBuffer对象的内容可以修改；而String对象一旦产生后就不可以被修改，重新赋值其实是两个对象。
+StringBuffer对象的内容可以修改
 StringBuffer是线程安全的，在多线程程序中也可以很方便的进行使用，但是程序的执行效率相对来说就要稍微慢一些。StringBuilder是线程不安全的
 执行速度方面的比较：StringBuilder >  StringBuffer  >  String
 
@@ -155,4 +155,13 @@ idea创建Resources文件夹，将applicationContext.xml，web.xml放入里面
 19.ApplictionContext接口实现：
 FileSystemXmlApplicationContext：该容器从 XML 文件中加载已被定义的 bean。在这里，你需要提供给构造器 XML 文件的完整路径
 ClassPathXmlApplicationContext：该容器从 XML 文件中加载已被定义的 bean。在这里，你不需要提供 XML 文件的完整路径，只需正确配置 CLASSPATH 环境变量即可，因为，容器会从 CLASSPATH 中搜索 bean 配置文件。
-WebXmlApplicationContext：该容器会在一个 web 应用程序的范围内加载在 XML 文件中已被定义的 bean。
+WebXmlApplicationContext：该容器会在一个 web 应用程序的范围内加载在 XML 文件中已被定义的 bean
+
+20.Java中sleep,wait,yield,join的区别
+    1.sleep()方法在指定时间内让当前正在执行的线程暂停执行，但不会释放“锁标志”。不推荐使用。sleep()使当前线程进入阻塞状态，在指定时间内不会执行。
+
+    2.wait()方法：在其他线程调用对象的notify或notifyAll方法前，导致当前线程等待。线程会释放掉它所占有的“锁标志”，从而使别的线程有机会抢占该锁。当前线程必须拥有当前对象锁。如果当前线程不是此锁的拥有者，会抛出IllegalMonitorStateException异常。唤醒当前对象锁的等待线程使用notify或notifyAll方法，也必须拥有相同的对象锁，否则也会抛出IllegalMonitorStateException异常。waite()和notify()必须在synchronized函数或synchronized　block中进行调用。如果在non-synchronized函数或non-synchronized　block中进行调用，虽然能编译通过，但在运行时会发生IllegalMonitorStateException的异常。
+
+    3.yield方法：暂停当前正在执行的线程对象。yield()只是使当前线程重新回到可执行状态，所以执行yield()的线程有可能在进入到可执行状态后马上又被执行。yield()只能使同优先级或更高优先级的线程有执行的机会。 
+
+    4.join方法：等待该线程终止。等待调用join方法的线程结束，再继续执行。如：t.join();//主要用于等待t线程运行结束，若无此句，main则会执行完毕，导致结果不可预测。
