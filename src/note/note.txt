@@ -166,6 +166,9 @@ WebXmlApplicationContext：该容器会在一个 web 应用程序的范围内加
 
     4.join方法：等待该线程终止。等待调用join方法的线程结束，再继续执行。如：t.join();//主要用于等待t线程运行结束，若无此句，main则会执行完毕，导致结果不可预测。
 
+21.怎么理解IOC：不负责创建对象，由外部的容器来负责，只负责使用
+   怎么理解依赖注入：只是一种实现方式
 21.spring作用域：
   1.singleton 作用域：创建后，该作用域将 bean 的定义的限制在每一个 Spring IoC 容器中的一个单一实例，默认就是singleton
   2.prototype 作用域：该作用域将单一 bean 的定义限制在任意数量的对象实例
+22.spring bean配置文件里，id的作用是唯一标识，用于在对象实例getBean时获取
